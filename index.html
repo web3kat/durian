@@ -108,7 +108,7 @@
       <h2>The King of Fruits</h2>
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/627/original/durian.jpg?1698916695"
-        alt="Durian"
+        alt="vintage durian illustration off of Philippine Islands Fruits and Flowers published between 1798 and 1850"
       />
       <p>
         The <strong>durian</strong> (/ˈdʊəriən/, /ˈdjʊəriən/) is the edible
@@ -150,18 +150,24 @@
       </p>
     </div>
     <script>
-      function join() {
+      function updateHeading(newHeading) {
         let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+        window.scrollTo(0, 0);
+      }
+
+      function join() {
         let name = prompt("What is your name?");
         let email = prompt("What is your email address?");
-        window.scrollTo(0, 0);
 
-        if (name.length > 0) {
-          heading.innerHTML =
-            "Thank you, " + name + "! You'll get an email from us soon.";
+        if (name && email) {
+          updateHeading(
+            `Thank you, ${name}! You'll get an email from us soon.`
+          );
         } else {
-          heading.innerHTML =
-            "Sorry, please enter your details to join our durian tour.";
+          updateHeading(
+            `Sorry, please submit your details to join our durian tour.`
+          );
         }
       }
 
