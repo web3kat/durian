@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✈️ Join Our Durian Tour</title>
+    <style>
+      body {
+        background-color: #323232;
+        color: #000;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0 auto;
+        width: 90%;
+      }
+
+      button {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        background: #295f4e;
+        color: #f4e5c2;
+        display: block;
+        font-size: 18px;
+        margin: 20px auto;
+        padding: 15px 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      h2 {
+        background-color: #323232;
+        border: 1px solid #f4e5c2;
+        border-radius: 4px;
+        color: #f4e5c2;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: monospace;
+        padding: 15px;
+        text-align: center;
+      }
+
+      hr {
+        border: 1px dotted #000;
+      }
+
+      img {
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 20px 0 10px;
+      }
+
+      .container {
+        background-image: linear-gradient(to top, #f4e5c2 0%, #6db193 100%);
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px 40px;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .learn-more {
+        color: #295f4e;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .me {
+        color: #295f4e;
+        text-decoration: none;
+      }
+
+      .me:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Durian</h1>
+      <h2>The King of Fruits</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/627/original/durian.jpg?1698916695"
+        alt="Durian"
+      />
+      <p>
+        The <strong>durian</strong> (/ˈdʊəriən/, /ˈdjʊəriən/) is the edible
+        fruit of several tree species belonging to the genus
+        <strong><em>Durio</em></strong
+        >. Named in some regions as the "king of fruits", the durian is
+        distinctive for its large size, strong odour, and thorn-covered rind.
+
+        <br />
+        <br />
+
+        Some people regard the durian as having a pleasantly sweet fragrance,
+        whereas others find the aroma overpowering and unpleasant. The smell
+        evokes reactions ranging from deep appreciation to intense disgust. The
+        persistence of its odour, which may linger for several days, has led
+        certain hotels and public transportation services in Southeast Asia to
+        ban the fruit. The 19th-century British naturalist Alfred Russel Wallace
+        described its flesh as "a rich custard highly flavoured with almonds".
+        The flesh can be consumed at various stages of ripeness, and it is used
+        to flavour a wide variety of savoury and sweet desserts in Southeast
+        Asian cuisines. The seeds can also be eaten when cooked.
+      </p>
+
+      <hr />
+
+      <a
+        href="https://en.wikipedia.org/wiki/Durian"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on Wikipedia
+      </a>
+      <button class="join-button">👉 Join Our Durian Tour 👈</button>
+      <p class="footer">
+        This page was built by
+        <a href="https://github.com/katmohd" target="_blank" class="me">Kat</a>
+      </p>
+    </div>
+    <script>
+      function join() {
+        let heading = document.querySelector("h1");
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        window.scrollTo(0, 0);
+
+        if (name.length > 0) {
+          heading.innerHTML =
+            "Thank you, " + name + "! You'll get an email from us soon.";
+        } else {
+          heading.innerHTML =
+            "Sorry, please enter your details to join our durian tour.";
+        }
+      }
+
+      let joinButton = document.querySelector(".join-button");
+      joinButton.addEventListener("click", join);
+    </script>
+  </body>
+</html>
